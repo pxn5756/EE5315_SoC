@@ -1,0 +1,8 @@
+*.cache
+*.Xil
+dfx_runtime.txt
+*.jou
+*.log
+*.str
+*.jobs
+*.ip_user_files

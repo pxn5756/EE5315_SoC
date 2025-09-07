@@ -1,0 +1,376 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Sat Sep  6 20:26:34 2025
+# Process ID         : 24404
+# Current directory  : C:/Users/peter/SoC_workspace/Lab1/Lab1.runs/synth_1
+# Command line       : vivado.exe -log Counter16Bit.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Counter16Bit.tcl
+# Log file           : C:/Users/peter/SoC_workspace/Lab1/Lab1.runs/synth_1/Counter16Bit.vds
+# Journal file       : C:/Users/peter/SoC_workspace/Lab1/Lab1.runs/synth_1\vivado.jou
+# Running On         : Peter-PC_Rig
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i5-13600K
+# CPU Frequency      : 3494 MHz
+# CPU Physical cores : 14
+# CPU Logical cores  : 20
+# Host memory        : 34104 MB
+# Swap memory        : 9663 MB
+# Total Virtual      : 43767 MB
+# Available Virtual  : 23010 MB
+#-----------------------------------------------------------
+source Counter16Bit.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental C:/Users/peter/SoC_workspace/Lab1/Lab1.srcs/utils_1/imports/synth_1/Counter16Bit.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/peter/SoC_workspace/Lab1/Lab1.srcs/utils_1/imports/synth_1/Counter16Bit.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top Counter16Bit -part xc7z007sclg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z007s'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z007s'
+INFO: [Device 21-403] Loading part xc7z007sclg400-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 25340
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1193.324 ; gain = 494.016
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Counter16Bit' [C:/Users/peter/SoC_workspace/Lab1/Lab1.srcs/sources_1/new/seven_seg.sv:22]
+INFO: [Synth 8-6157] synthesizing module 'Counter250ms' [C:/Users/peter/SoC_workspace/Lab1/Lab1.srcs/sources_1/new/seven_seg.sv:146]
+INFO: [Synth 8-6155] done synthesizing module 'Counter250ms' (0#1) [C:/Users/peter/SoC_workspace/Lab1/Lab1.srcs/sources_1/new/seven_seg.sv:146]
+INFO: [Synth 8-6157] synthesizing module 'hex_to_ss' [C:/Users/peter/SoC_workspace/Lab1/Lab1.srcs/sources_1/new/seven_seg.sv:246]
+INFO: [Synth 8-226] default block is never used [C:/Users/peter/SoC_workspace/Lab1/Lab1.srcs/sources_1/new/seven_seg.sv:253]
+INFO: [Synth 8-6155] done synthesizing module 'hex_to_ss' (0#1) [C:/Users/peter/SoC_workspace/Lab1/Lab1.srcs/sources_1/new/seven_seg.sv:246]
+INFO: [Synth 8-6157] synthesizing module 'seven_seg' [C:/Users/peter/SoC_workspace/Lab1/Lab1.srcs/sources_1/new/seven_seg.sv:209]
+INFO: [Synth 8-6155] done synthesizing module 'seven_seg' (0#1) [C:/Users/peter/SoC_workspace/Lab1/Lab1.srcs/sources_1/new/seven_seg.sv:209]
+INFO: [Synth 8-6155] done synthesizing module 'Counter16Bit' (0#1) [C:/Users/peter/SoC_workspace/Lab1/Lab1.srcs/sources_1/new/seven_seg.sv:22]
+WARNING: [Synth 8-6014] Unused sequential element MAXIMUM_reg was removed.  [C:/Users/peter/SoC_workspace/Lab1/Lab1.srcs/sources_1/new/seven_seg.sv:170]
+WARNING: [Synth 8-6014] Unused sequential element MINIMUM_reg was removed.  [C:/Users/peter/SoC_workspace/Lab1/Lab1.srcs/sources_1/new/seven_seg.sv:171]
+WARNING: [Synth 8-3917] design Counter16Bit has port LED[9] driven by constant 0
+WARNING: [Synth 8-3917] design Counter16Bit has port LED[8] driven by constant 0
+WARNING: [Synth 8-3917] design Counter16Bit has port LED[7] driven by constant 0
+WARNING: [Synth 8-3917] design Counter16Bit has port LED[6] driven by constant 0
+WARNING: [Synth 8-3917] design Counter16Bit has port LED[5] driven by constant 0
+WARNING: [Synth 8-3917] design Counter16Bit has port LED[4] driven by constant 0
+WARNING: [Synth 8-3917] design Counter16Bit has port LED[3] driven by constant 0
+WARNING: [Synth 8-3917] design Counter16Bit has port LED[2] driven by constant 0
+WARNING: [Synth 8-3917] design Counter16Bit has port LED[1] driven by constant 0
+WARNING: [Synth 8-3917] design Counter16Bit has port RGB0[2] driven by constant 0
+WARNING: [Synth 8-3917] design Counter16Bit has port RGB0[1] driven by constant 0
+WARNING: [Synth 8-3917] design Counter16Bit has port RGB0[0] driven by constant 0
+WARNING: [Synth 8-3917] design Counter16Bit has port RGB1[2] driven by constant 0
+WARNING: [Synth 8-3917] design Counter16Bit has port RGB1[1] driven by constant 0
+WARNING: [Synth 8-3917] design Counter16Bit has port RGB1[0] driven by constant 0
+WARNING: [Synth 8-3917] design Counter16Bit has port SERVO[3] driven by constant 0
+WARNING: [Synth 8-3917] design Counter16Bit has port SERVO[2] driven by constant 0
+WARNING: [Synth 8-3917] design Counter16Bit has port SERVO[1] driven by constant 0
+WARNING: [Synth 8-3917] design Counter16Bit has port SERVO[0] driven by constant 0
+WARNING: [Synth 8-3917] design Counter16Bit has port PDM_SPEAKER driven by constant 0
+WARNING: [Synth 8-3917] design Counter16Bit has port PDM_MIC_CLK driven by constant 0
+WARNING: [Synth 8-3917] design Counter16Bit has port ESP32_UART1_TXD driven by constant 0
+WARNING: [Synth 8-3917] design Counter16Bit has port IMU_SCLK driven by constant 0
+WARNING: [Synth 8-3917] design Counter16Bit has port IMU_SDI driven by constant 0
+WARNING: [Synth 8-3917] design Counter16Bit has port IMU_CS_AG driven by constant 1
+WARNING: [Synth 8-3917] design Counter16Bit has port IMU_CS_M driven by constant 1
+WARNING: [Synth 8-3917] design Counter16Bit has port IMU_DEN_AG driven by constant 0
+WARNING: [Synth 8-7129] Port max_set in module Counter250ms is either unconnected or has no load
+WARNING: [Synth 8-7129] Port min_set in module Counter250ms is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[23] in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[22] in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[21] in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[20] in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[19] in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[18] in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[17] in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[16] in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[15] in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[14] in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[13] in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[12] in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[11] in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[10] in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[9] in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[8] in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[7] in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[6] in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[5] in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[4] in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[3] in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[2] in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[1] in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[0] in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PDM_MIC_DATA in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ESP32_UART1_RXD in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IMU_SDO_AG in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IMU_SDO_M in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IMU_DRDY_M in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IMU_INT1_AG in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IMU_INT_M in module Counter16Bit is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1301.359 ; gain = 602.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1301.359 ; gain = 602.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1301.359 ; gain = 602.051
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1301.359 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/peter/SoC_workspace/Lab1/Lab1.srcs/constrs_1/new/blackboard.xdc]
+Finished Parsing XDC File [C:/Users/peter/SoC_workspace/Lab1/Lab1.srcs/constrs_1/new/blackboard.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/peter/SoC_workspace/Lab1/Lab1.srcs/constrs_1/new/blackboard.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Counter16Bit_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Counter16Bit_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1365.086 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1365.086 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1365.086 ; gain = 665.777
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z007sclg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1365.086 ; gain = 665.777
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1365.086 ; gain = 665.777
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1365.086 ; gain = 665.777
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input   16 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               16 Bit    Registers := 2     
+	               11 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 11    
++---Muxes : 
+	   2 Input   16 Bit        Muxes := 1     
+	   4 Input    8 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 66 (col length:40)
+BRAMs: 100 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3917] design Counter16Bit has port LED[9] driven by constant 0
+WARNING: [Synth 8-3917] design Counter16Bit has port LED[8] driven by constant 0
+WARNING: [Synth 8-3917] design Counter16Bit has port LED[7] driven by constant 0
+WARNING: [Synth 8-3917] design Counter16Bit has port LED[6] driven by constant 0
+WARNING: [Synth 8-3917] design Counter16Bit has port LED[5] driven by constant 0
+WARNING: [Synth 8-3917] design Counter16Bit has port LED[4] driven by constant 0
+WARNING: [Synth 8-3917] design Counter16Bit has port LED[3] driven by constant 0
+WARNING: [Synth 8-3917] design Counter16Bit has port LED[2] driven by constant 0
+WARNING: [Synth 8-3917] design Counter16Bit has port LED[1] driven by constant 0
+WARNING: [Synth 8-3917] design Counter16Bit has port RGB0[2] driven by constant 0
+WARNING: [Synth 8-3917] design Counter16Bit has port RGB0[1] driven by constant 0
+WARNING: [Synth 8-3917] design Counter16Bit has port RGB0[0] driven by constant 0
+WARNING: [Synth 8-3917] design Counter16Bit has port RGB1[2] driven by constant 0
+WARNING: [Synth 8-3917] design Counter16Bit has port RGB1[1] driven by constant 0
+WARNING: [Synth 8-3917] design Counter16Bit has port RGB1[0] driven by constant 0
+WARNING: [Synth 8-3917] design Counter16Bit has port SERVO[3] driven by constant 0
+WARNING: [Synth 8-3917] design Counter16Bit has port SERVO[2] driven by constant 0
+WARNING: [Synth 8-3917] design Counter16Bit has port SERVO[1] driven by constant 0
+WARNING: [Synth 8-3917] design Counter16Bit has port SERVO[0] driven by constant 0
+WARNING: [Synth 8-3917] design Counter16Bit has port PDM_SPEAKER driven by constant 0
+WARNING: [Synth 8-3917] design Counter16Bit has port PDM_MIC_CLK driven by constant 0
+WARNING: [Synth 8-3917] design Counter16Bit has port ESP32_UART1_TXD driven by constant 0
+WARNING: [Synth 8-3917] design Counter16Bit has port IMU_SCLK driven by constant 0
+WARNING: [Synth 8-3917] design Counter16Bit has port IMU_SDI driven by constant 0
+WARNING: [Synth 8-3917] design Counter16Bit has port IMU_CS_AG driven by constant 1
+WARNING: [Synth 8-3917] design Counter16Bit has port IMU_CS_M driven by constant 1
+WARNING: [Synth 8-3917] design Counter16Bit has port IMU_DEN_AG driven by constant 0
+WARNING: [Synth 8-7129] Port GPIO[23] in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[22] in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[21] in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[20] in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[19] in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[18] in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[17] in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[16] in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[15] in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[14] in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[13] in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[12] in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[11] in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[10] in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[9] in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[8] in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[7] in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[6] in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[5] in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[4] in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[3] in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[2] in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[1] in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[0] in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PB[2] in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PB[1] in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PDM_MIC_DATA in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ESP32_UART1_RXD in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IMU_SDO_AG in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IMU_SDO_M in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IMU_DRDY_M in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IMU_INT1_AG in module Counter16Bit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IMU_INT_M in module Counter16Bit is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1369.320 ; gain = 670.012
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1520.293 ; gain = 820.984
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1553.285 ; gain = 853.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1553.285 ; gain = 853.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1767.039 ; gain = 1067.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1767.039 ; gain = 1067.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1767.039 ; gain = 1067.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1767.039 ; gain = 1067.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1767.039 ; gain = 1067.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1767.039 ; gain = 1067.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    18|
+|3     |LUT1   |     5|
+|4     |LUT2   |    12|
+|5     |LUT3   |    11|
+|6     |LUT4   |    14|
+|7     |LUT5   |     5|
+|8     |LUT6   |    32|
+|9     |MUXF7  |     2|
+|10    |FDRE   |   107|
+|11    |IBUF   |    15|
+|12    |OBUF   |    40|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1767.039 ; gain = 1067.730
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 61 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1767.039 ; gain = 1004.004
+Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1767.039 ; gain = 1067.730
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1772.301 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 20 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1775.035 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: ed31b960
+INFO: [Common 17-83] Releasing license: Synthesis
+30 Infos, 123 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1775.035 ; gain = 1285.367
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1775.035 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/peter/SoC_workspace/Lab1/Lab1.runs/synth_1/Counter16Bit.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file Counter16Bit_utilization_synth.rpt -pb Counter16Bit_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Sep  6 20:26:59 2025...

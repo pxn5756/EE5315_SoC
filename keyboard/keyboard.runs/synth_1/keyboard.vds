@@ -1,0 +1,356 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Fri Sep  5 15:09:54 2025
+# Process ID         : 5748
+# Current directory  : C:/Users/peter/SoC_workspace/keyboard/keyboard.runs/synth_1
+# Command line       : vivado.exe -log keyboard.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source keyboard.tcl
+# Log file           : C:/Users/peter/SoC_workspace/keyboard/keyboard.runs/synth_1/keyboard.vds
+# Journal file       : C:/Users/peter/SoC_workspace/keyboard/keyboard.runs/synth_1\vivado.jou
+# Running On         : Peter-PC_Rig
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i5-13600K
+# CPU Frequency      : 3494 MHz
+# CPU Physical cores : 14
+# CPU Logical cores  : 20
+# Host memory        : 34104 MB
+# Swap memory        : 9663 MB
+# Total Virtual      : 43767 MB
+# Available Virtual  : 29102 MB
+#-----------------------------------------------------------
+source keyboard.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental C:/Users/peter/SoC_workspace/keyboard/keyboard.srcs/utils_1/imports/synth_1/keyboard.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/peter/SoC_workspace/keyboard/keyboard.srcs/utils_1/imports/synth_1/keyboard.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top keyboard -part xc7z007sclg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z007s'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z007s'
+INFO: [Device 21-403] Loading part xc7z007sclg400-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 5160
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1193.566 ; gain = 494.547
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'keyboard' [C:/Users/peter/SoC_workspace/keyboard/keyboard.srcs/sources_1/new/keyboard.sv:13]
+INFO: [Synth 8-6157] synthesizing module 'key4x4' [C:/Users/peter/SoC_workspace/keyboard/keyboard.srcs/sources_1/new/keyboard.sv:120]
+INFO: [Synth 8-6155] done synthesizing module 'key4x4' (0#1) [C:/Users/peter/SoC_workspace/keyboard/keyboard.srcs/sources_1/new/keyboard.sv:120]
+INFO: [Synth 8-6155] done synthesizing module 'keyboard' (0#1) [C:/Users/peter/SoC_workspace/keyboard/keyboard.srcs/sources_1/new/keyboard.sv:13]
+WARNING: [Synth 8-3917] design keyboard has port LED[5] driven by constant 0
+WARNING: [Synth 8-3917] design keyboard has port LED[4] driven by constant 0
+WARNING: [Synth 8-3917] design keyboard has port LED[3] driven by constant 0
+WARNING: [Synth 8-3917] design keyboard has port LED[2] driven by constant 0
+WARNING: [Synth 8-3917] design keyboard has port RGB0[2] driven by constant 0
+WARNING: [Synth 8-3917] design keyboard has port RGB0[1] driven by constant 0
+WARNING: [Synth 8-3917] design keyboard has port RGB0[0] driven by constant 0
+WARNING: [Synth 8-3917] design keyboard has port RGB1[2] driven by constant 0
+WARNING: [Synth 8-3917] design keyboard has port RGB1[1] driven by constant 0
+WARNING: [Synth 8-3917] design keyboard has port RGB1[0] driven by constant 0
+WARNING: [Synth 8-3917] design keyboard has port SS_ANODE[3] driven by constant 0
+WARNING: [Synth 8-3917] design keyboard has port SS_ANODE[2] driven by constant 1
+WARNING: [Synth 8-3917] design keyboard has port SS_ANODE[1] driven by constant 1
+WARNING: [Synth 8-3917] design keyboard has port SS_ANODE[0] driven by constant 1
+WARNING: [Synth 8-3917] design keyboard has port SS_CATHODE[7] driven by constant 1
+WARNING: [Synth 8-3917] design keyboard has port SS_CATHODE[6] driven by constant 0
+WARNING: [Synth 8-3917] design keyboard has port SS_CATHODE[5] driven by constant 0
+WARNING: [Synth 8-3917] design keyboard has port SS_CATHODE[4] driven by constant 1
+WARNING: [Synth 8-3917] design keyboard has port SS_CATHODE[3] driven by constant 1
+WARNING: [Synth 8-3917] design keyboard has port SS_CATHODE[2] driven by constant 0
+WARNING: [Synth 8-3917] design keyboard has port SS_CATHODE[1] driven by constant 0
+WARNING: [Synth 8-3917] design keyboard has port SS_CATHODE[0] driven by constant 1
+WARNING: [Synth 8-3917] design keyboard has port SERVO[3] driven by constant 0
+WARNING: [Synth 8-3917] design keyboard has port SERVO[2] driven by constant 0
+WARNING: [Synth 8-3917] design keyboard has port SERVO[1] driven by constant 0
+WARNING: [Synth 8-3917] design keyboard has port SERVO[0] driven by constant 0
+WARNING: [Synth 8-3917] design keyboard has port PDM_SPEAKER driven by constant 0
+WARNING: [Synth 8-3917] design keyboard has port PDM_MIC_CLK driven by constant 0
+WARNING: [Synth 8-3917] design keyboard has port ESP32_UART1_TXD driven by constant 0
+WARNING: [Synth 8-3917] design keyboard has port IMU_SCLK driven by constant 0
+WARNING: [Synth 8-3917] design keyboard has port IMU_SDI driven by constant 0
+WARNING: [Synth 8-3917] design keyboard has port IMU_CS_AG driven by constant 1
+WARNING: [Synth 8-3917] design keyboard has port IMU_CS_M driven by constant 1
+WARNING: [Synth 8-3917] design keyboard has port IMU_DEN_AG driven by constant 0
+WARNING: [Synth 8-7129] Port SW[11] in module keyboard is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[10] in module keyboard is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[9] in module keyboard is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[8] in module keyboard is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[7] in module keyboard is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[6] in module keyboard is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[5] in module keyboard is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[4] in module keyboard is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[3] in module keyboard is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[2] in module keyboard is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[1] in module keyboard is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[0] in module keyboard is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PB[3] in module keyboard is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PB[2] in module keyboard is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PDM_MIC_DATA in module keyboard is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ESP32_UART1_RXD in module keyboard is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IMU_SDO_AG in module keyboard is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IMU_SDO_M in module keyboard is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IMU_DRDY_M in module keyboard is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IMU_INT1_AG in module keyboard is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IMU_INT_M in module keyboard is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1301.289 ; gain = 602.270
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1301.289 ; gain = 602.270
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1301.289 ; gain = 602.270
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1301.289 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/peter/SoC_workspace/keyboard/keyboard.srcs/constrs_1/new/blackboard.xdc]
+Finished Parsing XDC File [C:/Users/peter/SoC_workspace/keyboard/keyboard.srcs/constrs_1/new/blackboard.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/peter/SoC_workspace/keyboard/keyboard.srcs/constrs_1/new/blackboard.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/keyboard_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/keyboard_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/peter/SoC_workspace/keyboard/keyboard.srcs/constrs_1/new/keyboard_pullups.xdc]
+Finished Parsing XDC File [C:/Users/peter/SoC_workspace/keyboard/keyboard.srcs/constrs_1/new/keyboard_pullups.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1375.719 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1375.719 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1375.719 ; gain = 676.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z007sclg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1375.719 ; gain = 676.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1375.719 ; gain = 676.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1375.719 ; gain = 676.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    4 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 4     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input    4 Bit        Muxes := 6     
+	   2 Input    1 Bit        Muxes := 14    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 66 (col length:40)
+BRAMs: 100 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3917] design keyboard has port LED[5] driven by constant 0
+WARNING: [Synth 8-3917] design keyboard has port LED[4] driven by constant 0
+WARNING: [Synth 8-3917] design keyboard has port LED[3] driven by constant 0
+WARNING: [Synth 8-3917] design keyboard has port LED[2] driven by constant 0
+WARNING: [Synth 8-3917] design keyboard has port RGB0[2] driven by constant 0
+WARNING: [Synth 8-3917] design keyboard has port RGB0[1] driven by constant 0
+WARNING: [Synth 8-3917] design keyboard has port RGB0[0] driven by constant 0
+WARNING: [Synth 8-3917] design keyboard has port RGB1[2] driven by constant 0
+WARNING: [Synth 8-3917] design keyboard has port RGB1[1] driven by constant 0
+WARNING: [Synth 8-3917] design keyboard has port RGB1[0] driven by constant 0
+WARNING: [Synth 8-3917] design keyboard has port SS_ANODE[3] driven by constant 0
+WARNING: [Synth 8-3917] design keyboard has port SS_ANODE[2] driven by constant 1
+WARNING: [Synth 8-3917] design keyboard has port SS_ANODE[1] driven by constant 1
+WARNING: [Synth 8-3917] design keyboard has port SS_ANODE[0] driven by constant 1
+WARNING: [Synth 8-3917] design keyboard has port SS_CATHODE[7] driven by constant 1
+WARNING: [Synth 8-3917] design keyboard has port SS_CATHODE[6] driven by constant 0
+WARNING: [Synth 8-3917] design keyboard has port SS_CATHODE[5] driven by constant 0
+WARNING: [Synth 8-3917] design keyboard has port SS_CATHODE[4] driven by constant 1
+WARNING: [Synth 8-3917] design keyboard has port SS_CATHODE[3] driven by constant 1
+WARNING: [Synth 8-3917] design keyboard has port SS_CATHODE[2] driven by constant 0
+WARNING: [Synth 8-3917] design keyboard has port SS_CATHODE[1] driven by constant 0
+WARNING: [Synth 8-3917] design keyboard has port SS_CATHODE[0] driven by constant 1
+WARNING: [Synth 8-3917] design keyboard has port SERVO[3] driven by constant 0
+WARNING: [Synth 8-3917] design keyboard has port SERVO[2] driven by constant 0
+WARNING: [Synth 8-3917] design keyboard has port SERVO[1] driven by constant 0
+WARNING: [Synth 8-3917] design keyboard has port SERVO[0] driven by constant 0
+WARNING: [Synth 8-3917] design keyboard has port PDM_SPEAKER driven by constant 0
+WARNING: [Synth 8-3917] design keyboard has port PDM_MIC_CLK driven by constant 0
+WARNING: [Synth 8-3917] design keyboard has port ESP32_UART1_TXD driven by constant 0
+WARNING: [Synth 8-3917] design keyboard has port IMU_SCLK driven by constant 0
+WARNING: [Synth 8-3917] design keyboard has port IMU_SDI driven by constant 0
+WARNING: [Synth 8-3917] design keyboard has port IMU_CS_AG driven by constant 1
+WARNING: [Synth 8-3917] design keyboard has port IMU_CS_M driven by constant 1
+WARNING: [Synth 8-3917] design keyboard has port IMU_DEN_AG driven by constant 0
+WARNING: [Synth 8-7129] Port SW[11] in module keyboard is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[10] in module keyboard is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[9] in module keyboard is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[8] in module keyboard is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[7] in module keyboard is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[6] in module keyboard is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[5] in module keyboard is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[4] in module keyboard is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[3] in module keyboard is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[2] in module keyboard is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[1] in module keyboard is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SW[0] in module keyboard is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PB[3] in module keyboard is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PB[2] in module keyboard is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PDM_MIC_DATA in module keyboard is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ESP32_UART1_RXD in module keyboard is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IMU_SDO_AG in module keyboard is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IMU_SDO_M in module keyboard is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IMU_DRDY_M in module keyboard is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IMU_INT1_AG in module keyboard is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IMU_INT_M in module keyboard is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1375.719 ; gain = 676.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1516.086 ; gain = 817.066
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1536.734 ; gain = 837.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1547.316 ; gain = 848.297
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1762.051 ; gain = 1063.031
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1762.051 ; gain = 1063.031
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1762.051 ; gain = 1063.031
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1762.051 ; gain = 1063.031
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1762.051 ; gain = 1063.031
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1762.051 ; gain = 1063.031
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     5|
+|3     |LUT1   |     2|
+|4     |LUT2   |     2|
+|5     |LUT3   |     6|
+|6     |LUT4   |    10|
+|7     |LUT5   |     4|
+|8     |LUT6   |    11|
+|9     |FDRE   |    47|
+|10    |IBUF   |     7|
+|11    |OBUF   |    40|
+|12    |OBUFT  |     4|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1762.051 ; gain = 1063.031
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 56 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1762.051 ; gain = 988.602
+Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1762.051 ; gain = 1063.031
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1766.648 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1770.270 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 8261e109
+INFO: [Common 17-83] Releasing license: Synthesis
+25 Infos, 111 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:25 . Memory (MB): peak = 1770.270 ; gain = 1284.094
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1770.270 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/peter/SoC_workspace/keyboard/keyboard.runs/synth_1/keyboard.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file keyboard_utilization_synth.rpt -pb keyboard_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Sep  5 15:10:24 2025...
