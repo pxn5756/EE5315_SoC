@@ -6,3 +6,4 @@ dfx_runtime.txt
 *.str
 *.jobs
 *.ip_user_files
+*.sim

@@ -73,7 +73,11 @@ set_property ip_output_repo c:/Users/peter/SoC_workspace/Lab1/Lab1.cache/ip [cur
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib -sv C:/Users/peter/SoC_workspace/Lab1/Lab1.srcs/sources_1/new/seven_seg.sv
+read_verilog -library xil_defaultlib -sv {
+  C:/Users/peter/SoC_workspace/Lab1/Lab1.srcs/sources_1/new/hex_to_ss.sv
+  C:/Users/peter/SoC_workspace/Lab1/Lab1.srcs/sources_1/new/seven_seg.sv
+  C:/Users/peter/SoC_workspace/Lab1/Lab1.srcs/sources_1/new/Counter16Bit.sv
+}
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

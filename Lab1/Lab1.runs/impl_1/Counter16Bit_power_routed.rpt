@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
-| Date             : Sat Sep  6 20:27:40 2025
+| Date             : Fri Sep 12 05:43:43 2025
 | Host             : Peter-PC_Rig running 64-bit major release  (build 9200)
 | Command          : report_power -file Counter16Bit_power_routed.rpt -pb Counter16Bit_power_summary_routed.pb -rpx Counter16Bit_power_routed.rpx
 | Design           : Counter16Bit
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.100        |
+| Total On-Chip Power (W)  | 0.104        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.007        |
+| Dynamic (W)              | 0.011        |
 | Device Static (W)        | 0.093        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 83.8         |
@@ -53,16 +53,16 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      211 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       70 |     14400 |            0.49 |
-|   CARRY4       |    <0.001 |       18 |      4400 |            0.41 |
-|   Register     |    <0.001 |      107 |     28800 |            0.37 |
-|   F7/F8 Muxes  |    <0.001 |        2 |     17600 |            0.01 |
-|   Others       |     0.000 |        6 |       --- |             --- |
-| Signals        |    <0.001 |      185 |       --- |             --- |
-| I/O            |     0.006 |       55 |       100 |           55.00 |
+| Slice Logic    |     0.002 |      489 |       --- |             --- |
+|   LUT as Logic |     0.002 |      237 |     14400 |            1.65 |
+|   CARRY4       |    <0.001 |       48 |      4400 |            1.09 |
+|   Register     |    <0.001 |      144 |     28800 |            0.50 |
+|   F7/F8 Muxes  |    <0.001 |        3 |     17600 |            0.02 |
+|   Others       |     0.000 |        8 |       --- |             --- |
+| Signals        |     0.002 |      385 |       --- |             --- |
+| I/O            |     0.006 |       57 |       100 |           57.00 |
 | Static Power   |     0.093 |          |           |                 |
-| Total          |     0.100 |          |           |                 |
+| Total          |     0.104 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,7 +72,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.006 |       0.002 |      0.004 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.009 |       0.005 |      0.004 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.006 |       0.000 |      0.005 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.003 |       0.002 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -148,8 +148,8 @@ Table of Contents
 +--------------+-----------+
 | Name         | Power (W) |
 +--------------+-----------+
-| Counter16Bit |     0.007 |
-|   counter    |     0.001 |
+| Counter16Bit |     0.011 |
+|   counter    |     0.005 |
 +--------------+-----------+
 
 
