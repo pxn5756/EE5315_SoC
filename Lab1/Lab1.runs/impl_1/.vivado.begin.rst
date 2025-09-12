@@ -93,3 +93,28 @@
     <Process Command="vivado.bat" Owner="peter" Host="PETER-PC_RIG" Pid="2808" HostCore="20" HostMemory="034104049664">
     </Process>
 </ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="peter" Host="PETER-PC_RIG" Pid="20776" HostCore="20" HostMemory="034104049664">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="peter" Host="PETER-PC_RIG" Pid="10780" HostCore="20" HostMemory="034104049664">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="peter" Host="PETER-PC_RIG" Pid="26544" HostCore="20" HostMemory="034104049664">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="peter" Host="PETER-PC_RIG" Pid="3220" HostCore="20" HostMemory="034104049664">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="peter" Host="PETER-PC_RIG" Pid="26364" HostCore="20" HostMemory="034104049664">
+    </Process>
+</ProcessHandle>

@@ -164,15 +164,21 @@ module Counter250ms(
     reg [15:0] overflow_count;
     reg [15:0] underflow_count;
     reg underflow_occurred;
+    reg [16:0] overshoot;
+    reg [16:0] undershoot;
+    reg [16:0] RANGE;
 
-    always_comb begin
-        if (mode)
-            next_count = counter + delta;
-        else
-            next_count = counter - delta;
-
+    always_comb 
+    begin
         
-        overflow_count = next_count - MAXIMUM - 1;
+        RANGE = MAXIMUM - MINIMUM + 1;
+        next_count = mode ? counter + delta : counter - delta;
+
+        if (mode && next_count > MAXIMUM) 
+        begin
+            overflow_count = (next_count - MAXIMUM - 1) % RANGE;
+        end
+
 
         // Handle underflow when counter wraps below 0
         if (counter < delta)
@@ -181,7 +187,7 @@ module Counter250ms(
             underflow_occurred = 1'b1;
         end
         else
-            underflow_count = MINIMUM - next_count - 1;
+            underflow_count = (MINIMUM - next_count - 1) % RANGE;
     end
 
     always_ff @(posedge clk)

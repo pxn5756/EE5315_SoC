@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
-| Date             : Fri Sep 12 05:43:43 2025
+| Date             : Fri Sep 12 06:47:21 2025
 | Host             : Peter-PC_Rig running 64-bit major release  (build 9200)
 | Command          : report_power -file Counter16Bit_power_routed.rpt -pb Counter16Bit_power_summary_routed.pb -rpx Counter16Bit_power_routed.rpx
 | Design           : Counter16Bit
@@ -53,13 +53,13 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.001 |        3 |       --- |             --- |
-| Slice Logic    |     0.002 |      489 |       --- |             --- |
-|   LUT as Logic |     0.002 |      237 |     14400 |            1.65 |
-|   CARRY4       |    <0.001 |       48 |      4400 |            1.09 |
-|   Register     |    <0.001 |      144 |     28800 |            0.50 |
-|   F7/F8 Muxes  |    <0.001 |        3 |     17600 |            0.02 |
+| Slice Logic    |     0.002 |      525 |       --- |             --- |
+|   LUT as Logic |     0.002 |      239 |     14400 |            1.66 |
+|   CARRY4       |    <0.001 |       52 |      4400 |            1.18 |
+|   Register     |    <0.001 |      160 |     28800 |            0.56 |
+|   F7/F8 Muxes  |    <0.001 |        2 |     17600 |            0.01 |
 |   Others       |     0.000 |        8 |       --- |             --- |
-| Signals        |     0.002 |      385 |       --- |             --- |
+| Signals        |     0.002 |      390 |       --- |             --- |
 | I/O            |     0.006 |       57 |       100 |           57.00 |
 | Static Power   |     0.093 |          |           |                 |
 | Total          |     0.104 |          |           |                 |
@@ -98,17 +98,17 @@ Table of Contents
 1.3 Confidence Level
 --------------------
 
-+-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
-| User Input Data             | Confidence | Details                                                | Action                                                                                                     |
-+-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
-| Design implementation state | High       | Design is routed                                       |                                                                                                            |
-| Clock nodes activity        | High       | User specified more than 95% of clocks                 |                                                                                                            |
-| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
-| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
-| Device models               | High       | Device models are Production                           |                                                                                                            |
-|                             |            |                                                        |                                                                                                            |
-| Overall confidence level    | Low        |                                                        |                                                                                                            |
-+-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                             |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                                    |
+| Clock nodes activity        | Medium     | More than 5% of clocks are missing user specification  | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view           |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views         |
+| Device models               | High       | Device models are Production                           |                                                                                                                    |
+|                             |            |                                                        |                                                                                                                    |
+| Overall confidence level    | Low        |                                                        |                                                                                                                    |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 
 
 2. Settings
@@ -149,7 +149,7 @@ Table of Contents
 | Name         | Power (W) |
 +--------------+-----------+
 | Counter16Bit |     0.011 |
-|   counter    |     0.005 |
+|   counter    |     0.004 |
 +--------------+-----------+
 
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z007sclg400-1" LaunchTime="1757673787">
+<GenRun Id="impl_1" LaunchPart="xc7z007sclg400-1" LaunchTime="1757677604">
   <File Type="PA-TCL" Name="Counter16Bit.tcl"/>
   <File Type="REPORTS-TCL" Name="Counter16Bit_reports.tcl"/>
   <File Type="INIT-TIMING" Name="Counter16Bit_timing_summary_init.rpt"/>
