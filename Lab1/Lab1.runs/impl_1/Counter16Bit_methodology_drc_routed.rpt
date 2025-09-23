@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
-| Date         : Fri Sep 12 06:47:20 2025
+| Date         : Sat Sep 13 02:17:50 2025
 | Host         : Peter-PC_Rig running 64-bit major release  (build 9200)
 | Command      : report_methodology -file Counter16Bit_methodology_drc_routed.rpt -pb Counter16Bit_methodology_drc_routed.pb -rpx Counter16Bit_methodology_drc_routed.rpx
 | Design       : Counter16Bit
@@ -23,17 +23,23 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max checks: <unlimited>
-             Checks found: 56
+             Checks found: 74
 +-----------+----------+--------------------------------+--------+
 | Rule      | Severity | Description                    | Checks |
 +-----------+----------+--------------------------------+--------+
+| LUTAR-1   | Warning  | LUT drives async reset alert   | 1      |
 | TIMING-18 | Warning  | Missing input or output delay  | 38     |
-| TIMING-20 | Warning  | Non-clocked latch              | 17     |
+| TIMING-20 | Warning  | Non-clocked latch              | 34     |
 | LATCH-1   | Advisory | Existing latches in the design | 1      |
 +-----------+----------+--------------------------------+--------+
 
 2. REPORT DETAILS
 -----------------
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell counter/start_reg_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) counter/start_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
 TIMING-18#1 Warning
 Missing input or output delay  
 An input delay is missing on PB[0] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
@@ -306,12 +312,97 @@ Related violations: <none>
 
 TIMING-20#17 Warning
 Non-clocked latch  
+The latch counter/start_reg cannot be properly analyzed as its control pin counter/start_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#18 Warning
+Non-clocked latch  
+The latch counter/underflow_count_reg[0] cannot be properly analyzed as its control pin counter/underflow_count_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#19 Warning
+Non-clocked latch  
+The latch counter/underflow_count_reg[10] cannot be properly analyzed as its control pin counter/underflow_count_reg[10]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#20 Warning
+Non-clocked latch  
+The latch counter/underflow_count_reg[11] cannot be properly analyzed as its control pin counter/underflow_count_reg[11]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#21 Warning
+Non-clocked latch  
+The latch counter/underflow_count_reg[12] cannot be properly analyzed as its control pin counter/underflow_count_reg[12]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#22 Warning
+Non-clocked latch  
+The latch counter/underflow_count_reg[13] cannot be properly analyzed as its control pin counter/underflow_count_reg[13]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#23 Warning
+Non-clocked latch  
+The latch counter/underflow_count_reg[14] cannot be properly analyzed as its control pin counter/underflow_count_reg[14]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#24 Warning
+Non-clocked latch  
+The latch counter/underflow_count_reg[15] cannot be properly analyzed as its control pin counter/underflow_count_reg[15]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#25 Warning
+Non-clocked latch  
+The latch counter/underflow_count_reg[1] cannot be properly analyzed as its control pin counter/underflow_count_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#26 Warning
+Non-clocked latch  
+The latch counter/underflow_count_reg[2] cannot be properly analyzed as its control pin counter/underflow_count_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#27 Warning
+Non-clocked latch  
+The latch counter/underflow_count_reg[3] cannot be properly analyzed as its control pin counter/underflow_count_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#28 Warning
+Non-clocked latch  
+The latch counter/underflow_count_reg[4] cannot be properly analyzed as its control pin counter/underflow_count_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#29 Warning
+Non-clocked latch  
+The latch counter/underflow_count_reg[5] cannot be properly analyzed as its control pin counter/underflow_count_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#30 Warning
+Non-clocked latch  
+The latch counter/underflow_count_reg[6] cannot be properly analyzed as its control pin counter/underflow_count_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#31 Warning
+Non-clocked latch  
+The latch counter/underflow_count_reg[7] cannot be properly analyzed as its control pin counter/underflow_count_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#32 Warning
+Non-clocked latch  
+The latch counter/underflow_count_reg[8] cannot be properly analyzed as its control pin counter/underflow_count_reg[8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#33 Warning
+Non-clocked latch  
+The latch counter/underflow_count_reg[9] cannot be properly analyzed as its control pin counter/underflow_count_reg[9]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#34 Warning
+Non-clocked latch  
 The latch counter/underflow_occurred_reg cannot be properly analyzed as its control pin counter/underflow_occurred_reg/G is not reached by a timing clock
 Related violations: <none>
 
 LATCH-1#1 Advisory
 Existing latches in the design  
-There are 17 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
+There are 34 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
 Related violations: <none>
 
 

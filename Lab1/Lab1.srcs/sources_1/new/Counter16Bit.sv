@@ -164,30 +164,93 @@ module Counter250ms(
     reg [15:0] overflow_count;
     reg [15:0] underflow_count;
     reg underflow_occurred;
-    reg [16:0] overshoot;
-    reg [16:0] undershoot;
     reg [16:0] RANGE;
+    reg done;
+    reg start;
+
+    typedef enum logic [1:0] {
+        IDLE,
+        RUN,
+        FINISH
+    } state_t;
+
+    state_t state;
+    logic [15:0] remainder;
+    logic [15:0] dividend;
+    logic [4:0]  bit_index;  // 0 to 15
 
     always_comb 
     begin
         
         RANGE = MAXIMUM - MINIMUM + 1;
-        next_count = mode ? counter + delta : counter - delta;
 
-        if (mode && next_count > MAXIMUM) 
+        if (mode) 
         begin
-            overflow_count = (next_count - MAXIMUM - 1) % RANGE;
-        end
-
-
-        // Handle underflow when counter wraps below 0
-        if (counter < delta)
-        begin
-            underflow_count = 16'hFFFF - next_count;
-            underflow_occurred = 1'b1;
+            next_count = counter + delta;
+            if (next_count > MAXIMUM)
+            begin
+                if (done)
+                begin
+                    start <= 1'b0;
+                    overflow_count <= remainder;
+                end
+                else
+                begin
+                    start = 1'b1;
+                    dividend = (next_count - MAXIMUM - 1); 
+                end
+            end
         end
         else
-            underflow_count = (MINIMUM - next_count - 1) % RANGE;
+        begin
+            next_count = counter - delta;
+            // Handle underflow when counter wraps below 0
+            if (next_count > counter)
+            begin
+                underflow_count = 16'hFFFF - next_count;
+                underflow_occurred = 1'b1;
+            end
+            else
+                underflow_count = (MINIMUM - next_count - 1) % RANGE; 
+        end
+    end
+    
+    always_ff @(posedge clk) begin
+        if (reset) 
+        begin
+            state     <= IDLE;
+            remainder <= 0;
+            dividend  <= 0;
+            bit_index <= 0;
+            done      <= 0;
+        end 
+        else 
+        begin
+            case (state)
+                IDLE: begin
+                    done <= 0;
+                    if (start) begin
+                        remainder <= 0;
+                        bit_index <= 15;
+                        state     <= RUN;
+                    end
+                end
+
+                RUN: begin
+                    remainder <= (remainder << 1) | ((dividend >> bit_index) & 1);
+                    if (remainder >= RANGE)
+                        remainder <= remainder - RANGE;
+
+                    if (bit_index == 0)
+                    begin
+                        state <= IDLE;
+                        done <= 1;
+                    end
+                    else
+                        bit_index <= bit_index - 1;
+                end
+            endcase
+        end
     end
 
     always_ff @(posedge clk)
@@ -229,7 +292,7 @@ module Counter250ms(
                 if (mode)
                 begin
                     if (next_count > MAXIMUM)
-                        counter <= MINIMUM + overflow_count;
+                        counter <= overflow_count;
                     else
                     begin
                         counter <= next_count;
