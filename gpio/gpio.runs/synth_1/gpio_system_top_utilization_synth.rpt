@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
-| Date         : Sun Sep 21 01:35:59 2025
+| Date         : Thu Sep 25 12:27:04 2025
 | Host         : Peter-PC_Rig running 64-bit major release  (build 9200)
 | Command      : report_utilization -file gpio_system_top_utilization_synth.rpt -pb gpio_system_top_utilization_synth.pb
 | Design       : gpio_system_top
@@ -149,8 +149,8 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| OBUFT    |   32 |                  IO |
-| OBUF     |   30 |                  IO |
+| OBUFT    |   31 |                  IO |
+| OBUF     |   31 |                  IO |
 | IBUF     |   24 |                  IO |
 | LUT1     |   22 |                 LUT |
 +----------+------+---------------------+

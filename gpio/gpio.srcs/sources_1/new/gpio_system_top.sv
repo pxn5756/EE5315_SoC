@@ -91,6 +91,8 @@ module gpio_system_top (
     // Tie intr output to RGB0 green LED
     wire intr;
     assign RGB0 = {1'b0, intr, 1'b0};
+    
+    assign LED[0] = gpio_data_in[0];
 
     // Instantiate system wrapper
     system_wrapper system (

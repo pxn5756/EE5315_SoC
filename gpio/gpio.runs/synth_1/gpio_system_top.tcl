@@ -56,8 +56,9 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 5
 set_param general.usePosixSpawnForFork 1
-set_msg_config -id {HDL-1065} -limit 10000
+set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z007sclg400-1
 
@@ -77,7 +78,7 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib -sv C:/Users/peter/SoC_workspace/gpio/gpio.srcs/sources_1/new/gpio_system_top.sv
-read_verilog -library xil_defaultlib c:/Users/peter/SoC_workspace/gpio/gpio.gen/sources_1/bd/system/hdl/system_wrapper.v
+read_verilog -library xil_defaultlib C:/Users/peter/SoC_workspace/gpio/gpio.gen/sources_1/bd/system/hdl/system_wrapper.v
 add_files C:/Users/peter/SoC_workspace/gpio/gpio.srcs/sources_1/bd/system/system.bd
 set_property used_in_implementation false [get_files -all c:/Users/peter/SoC_workspace/gpio/gpio.gen/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/peter/SoC_workspace/gpio/gpio.gen/sources_1/bd/system/ip/system_proc_sys_reset_0_0/system_proc_sys_reset_0_0_board.xdc]
@@ -112,6 +113,8 @@ set_property used_in_implementation false [get_files C:/Users/peter/SoC_workspac
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental C:/Users/peter/SoC_workspace/gpio/gpio.srcs/utils_1/imports/synth_1/gpio_system_top.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
