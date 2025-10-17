@@ -129,24 +129,14 @@ module Lab3_main(
 
     assign LED[9:8] = {wr_request, rd_request};
 
-    edgeDetect ed_write(
-        .clk(clk),
-        .signal(WRITE),
-        .clk_pulse(wr_request)
-    );
 
-    edgeDetect ed_read(
-        .clk(clk),
-        .signal(READ),
-        .clk_pulse(rd_request)
-    );
 
     FIFO8x16 fifo_inst(
         .clk(clk),
         .reset(RESET),
         .wr_data(DATA),
-        .wr_request(wr_request),
-        .rd_request(rd_request),
+        .wr_request(WRITE),
+        .rd_request(READ),
         .clear_overflow_request(CLEAR),
         .rd_data(rd_data),
         .empty(fifo_flags[0]),

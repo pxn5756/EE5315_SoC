@@ -30,13 +30,28 @@ module FIFO8x16(
     output empty,
     output full, 
     output reg overflow,
-    output reg [7:0] rd_data,
+    output [7:0] rd_data,
     output reg [3:0] wr_index,
     output reg [3:0] rd_index
 
 );
     reg [7:0] fifo_buffer [0:15]; // 16 x 8-bit FIFO buffer
+   
+    wire WRITE;
+    wire READ;
     
+    edgeDetect ed_write(
+        .clk(clk),
+        .signal(wr_request),
+        .clk_pulse(WRITE)
+    );
+
+    edgeDetect ed_read(
+        .clk(clk),
+        .signal(rd_request),
+        .clk_pulse(READ)
+    );
+      
     assign full = ((wr_index + 1) & 4'b1111) == rd_index;
     assign empty = wr_index == rd_index;
 
@@ -51,24 +66,25 @@ module FIFO8x16(
         begin
             overflow <= 0;
         end
-        else if (wr_request && !full) 
+        else if (WRITE && !full) 
         begin
             fifo_buffer[wr_index] <= wr_data;
             wr_index <= (wr_index + 1) & 4'b1111;
         end
-        else if (wr_request && full)
+        else if (WRITE && full)
         begin
             overflow <= 1;
         end
         else
         begin
-            if (rd_request && !empty) 
+            if (READ && !empty) 
             begin
-                rd_data <= fifo_buffer[rd_index];
                 rd_index <= (rd_index + 1) & 4'b1111;
             end
         end
     end
+    
+    assign rd_data = fifo_buffer[rd_index];
 
 endmodule
 

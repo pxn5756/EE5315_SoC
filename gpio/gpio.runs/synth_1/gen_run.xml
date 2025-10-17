@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7z007sclg400-1" LaunchTime="1758821195" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/gpio_system_top.dcp">
-  <File Type="PA-TCL" Name="gpio_system_top.tcl"/>
   <File Type="REPORTS-TCL" Name="gpio_system_top_reports.tcl"/>
-  <File Type="RDS-RDS" Name="gpio_system_top.vds"/>
-  <File Type="RDS-PROPCONSTRS" Name="gpio_system_top_drc_synth.rpt"/>
   <File Type="RDS-UTIL" Name="gpio_system_top_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="gpio_system_top_utilization_synth.pb"/>
+  <File Type="PA-TCL" Name="gpio_system_top.tcl"/>
+  <File Type="RDS-RDS" Name="gpio_system_top.vds"/>
   <File Type="RDS-DCP" Name="gpio_system_top.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="gpio_system_top_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="gpio_system_top_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/bd/system/system.bd">
@@ -73,8 +70,8 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="system_proc_sys_reset_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="system_processing_system7_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_proc_sys_reset_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="system_gpio_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="system_axi_smc_0"/>
 </GenRun>

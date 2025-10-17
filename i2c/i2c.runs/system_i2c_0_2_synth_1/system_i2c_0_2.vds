@@ -1,0 +1,304 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Fri Oct 17 00:21:04 2025
+# Process ID         : 2920
+# Current directory  : C:/Users/peter/SoC_workspace/i2c/i2c.runs/system_i2c_0_2_synth_1
+# Command line       : vivado.exe -log system_i2c_0_2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_i2c_0_2.tcl
+# Log file           : C:/Users/peter/SoC_workspace/i2c/i2c.runs/system_i2c_0_2_synth_1/system_i2c_0_2.vds
+# Journal file       : C:/Users/peter/SoC_workspace/i2c/i2c.runs/system_i2c_0_2_synth_1\vivado.jou
+# Running On         : Peter-PC_Rig
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i5-13600K
+# CPU Frequency      : 3494 MHz
+# CPU Physical cores : 14
+# CPU Logical cores  : 20
+# Host memory        : 34104 MB
+# Swap memory        : 2147 MB
+# Total Virtual      : 36251 MB
+# Available Virtual  : 21884 MB
+#-----------------------------------------------------------
+source system_i2c_0_2.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/peter/SoC_workspace/ip_repo/i2c_1_0'.
+WARNING: [IP_Flow 19-2207] Repository 'c:/Users/peter/SoC_workspace/ip_repo/i2c_1_0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/peter/SoC_workspace/ip_repo/i2c_1_0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/2025.1/Vivado/data/ip'.
+Command: synth_design -top system_i2c_0_2 -part xc7z007sclg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z007s'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z007s'
+INFO: [Device 21-403] Loading part xc7z007sclg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 8888
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1198.285 ; gain = 492.668
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'system_i2c_0_2' [c:/Users/peter/SoC_workspace/i2c/i2c.gen/sources_1/bd/system/ip/system_i2c_0_2/synth/system_i2c_0_2.v:53]
+INFO: [Synth 8-6157] synthesizing module 'i2c_v1_0' [c:/Users/peter/SoC_workspace/i2c/i2c.gen/sources_1/bd/system/ipshared/6a98/hdl/i2c.v:4]
+INFO: [Synth 8-6157] synthesizing module 'i2c_v1_0_AXI' [c:/Users/peter/SoC_workspace/i2c/i2c.gen/sources_1/bd/system/ipshared/6a98/hdl/i2c_v1_0_AXI.v:4]
+INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/peter/SoC_workspace/i2c/i2c.gen/sources_1/bd/system/ipshared/6a98/hdl/i2c_v1_0_AXI.v:199]
+INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/peter/SoC_workspace/i2c/i2c.gen/sources_1/bd/system/ipshared/6a98/hdl/i2c_v1_0_AXI.v:313]
+INFO: [Synth 8-6155] done synthesizing module 'i2c_v1_0_AXI' (0#1) [c:/Users/peter/SoC_workspace/i2c/i2c.gen/sources_1/bd/system/ipshared/6a98/hdl/i2c_v1_0_AXI.v:4]
+INFO: [Synth 8-6157] synthesizing module 'FIFO' [c:/Users/peter/SoC_workspace/i2c/i2c.gen/sources_1/bd/system/ipshared/6a98/src/fifo.v:22]
+INFO: [Synth 8-6157] synthesizing module 'edgeDetect' [c:/Users/peter/SoC_workspace/i2c/i2c.gen/sources_1/bd/system/ipshared/6a98/src/edgeDetect.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'edgeDetect' (0#1) [c:/Users/peter/SoC_workspace/i2c/i2c.gen/sources_1/bd/system/ipshared/6a98/src/edgeDetect.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'FIFO' (0#1) [c:/Users/peter/SoC_workspace/i2c/i2c.gen/sources_1/bd/system/ipshared/6a98/src/fifo.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'i2c_v1_0' (0#1) [c:/Users/peter/SoC_workspace/i2c/i2c.gen/sources_1/bd/system/ipshared/6a98/hdl/i2c.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'system_i2c_0_2' (0#1) [c:/Users/peter/SoC_workspace/i2c/i2c.gen/sources_1/bd/system/ip/system_i2c_0_2/synth/system_i2c_0_2.v:53]
+WARNING: [Synth 8-6014] Unused sequential element waddr_reg was removed.  [c:/Users/peter/SoC_workspace/i2c/i2c.gen/sources_1/bd/system/ipshared/6a98/hdl/i2c_v1_0_AXI.v:151]
+WARNING: [Synth 8-7129] Port S_AXI_AWADDR[1] in module i2c_v1_0_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWADDR[0] in module i2c_v1_0_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[2] in module i2c_v1_0_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[1] in module i2c_v1_0_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[0] in module i2c_v1_0_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[2] in module i2c_v1_0_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[1] in module i2c_v1_0_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[0] in module i2c_v1_0_AXI is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1314.395 ; gain = 608.777
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1314.395 ; gain = 608.777
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1314.395 ; gain = 608.777
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1314.395 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1389.406 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1390.238 ; gain = 0.832
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1390.238 ; gain = 684.621
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z007sclg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1390.238 ; gain = 684.621
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1390.238 ; gain = 684.621
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1390.238 ; gain = 684.621
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    5 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 3     
++---Registers : 
+	               32 Bit    Registers := 6     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 11    
++---RAMs : 
+	              128 Bit	(16 X 8 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 6     
+	   6 Input   32 Bit        Muxes := 5     
+	   2 Input    7 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 7     
+	   6 Input    1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 66 (col length:40)
+BRAMs: 100 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port axi_awaddr[1] in module system_i2c_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_awaddr[0] in module system_i2c_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_awprot[2] in module system_i2c_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_awprot[1] in module system_i2c_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_awprot[0] in module system_i2c_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_arprot[2] in module system_i2c_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_arprot[1] in module system_i2c_0_2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axi_arprot[0] in module system_i2c_0_2 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1390.238 ; gain = 684.621
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++---------------+------------------------------+-----------+----------------------+-------------+
+|Module Name    | RTL Object                   | Inference | Size (Depth x Width) | Primitives  | 
++---------------+------------------------------+-----------+----------------------+-------------+
+|system_i2c_0_2 | inst/tx_fifo/fifo_buffer_reg | Implied   | 16 x 8               | RAM32M x 2  | 
++---------------+------------------------------+-----------+----------------------+-------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1520.594 ; gain = 814.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1520.742 ; gain = 815.125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++---------------+------------------------------+-----------+----------------------+-------------+
+|Module Name    | RTL Object                   | Inference | Size (Depth x Width) | Primitives  | 
++---------------+------------------------------+-----------+----------------------+-------------+
+|system_i2c_0_2 | inst/tx_fifo/fifo_buffer_reg | Implied   | 16 x 8               | RAM32M x 2  | 
++---------------+------------------------------+-----------+----------------------+-------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1540.086 ; gain = 834.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1765.086 ; gain = 1059.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1765.086 ; gain = 1059.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1765.086 ; gain = 1059.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1765.086 ; gain = 1059.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1765.086 ; gain = 1059.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1765.086 ; gain = 1059.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |LUT1     |     3|
+|2     |LUT2     |     4|
+|3     |LUT3     |     6|
+|4     |LUT4     |     9|
+|5     |LUT5     |    32|
+|6     |LUT6     |    46|
+|7     |RAM32M   |     1|
+|8     |RAM32X1D |     2|
+|9     |FDRE     |   158|
+|10    |FDSE     |     1|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1765.086 ; gain = 1059.469
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 9 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 1765.086 ; gain = 983.625
+Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1765.086 ; gain = 1059.469
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1774.223 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1777.918 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 3 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 1 instance 
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 2 instances
+
+Synth Design complete | Checksum: eea70b76
+INFO: [Common 17-83] Releasing license: Synthesis
+31 Infos, 19 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1777.918 ; gain = 1276.703
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1777.918 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/peter/SoC_workspace/i2c/i2c.runs/system_i2c_0_2_synth_1/system_i2c_0_2.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP system_i2c_0_2, cache-ID = c741f18fb9c5ccd4
+INFO: [Coretcl 2-1174] Renamed 5 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1777.918 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/peter/SoC_workspace/i2c/i2c.runs/system_i2c_0_2_synth_1/system_i2c_0_2.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file system_i2c_0_2_utilization_synth.rpt -pb system_i2c_0_2_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 17 00:21:29 2025...

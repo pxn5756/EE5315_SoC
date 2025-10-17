@@ -58,11 +58,9 @@ if {$::dispatch::connected} {
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 5
 set_param general.usePosixSpawnForFork 1
-set_param checkpoint.writeSynthRtdsInDcp 1
+set_param bd.open.in_stealth_mode 1
 set_param xicom.use_bs_reader 1
-set_msg_config -id {Common 17-41} -limit 10000000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
+set_msg_config -id {HDL-1065} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z007sclg400-1
 
@@ -73,6 +71,8 @@ set_property webtalk.parent_dir C:/Users/peter/SoC_workspace/Lab3_FIFO/Lab3_FIFO
 set_property parent.project_path C:/Users/peter/SoC_workspace/Lab3_FIFO/Lab3_FIFO.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
+set_property ip_repo_paths c:/Users/peter/SoC_workspace/ip_repo/i2c_1_0 [current_project]
+update_ip_catalog
 set_property ip_output_repo c:/Users/peter/SoC_workspace/Lab3_FIFO/Lab3_FIFO.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
